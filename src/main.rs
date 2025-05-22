@@ -10,7 +10,7 @@ async fn main() {
 
     // sleep(tokio::time::Duration::from_secs(5)).await;
     let host = "0.0.0.0:8080";
-    let socket_addr = host.parse().unwrap();
+    let socket_addr = host.parse::<std::net::SocketAddr>().unwrap();
     // 绑定端口 启动服务
     axum::Server::bind(&socket_addr)
         .serve(app.into_make_service())
