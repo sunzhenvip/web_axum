@@ -1,6 +1,6 @@
-use crate::config::config_init;
-use crate::model::db_conn_init;
-use crate::router::start_route;
+// use crate::config::config_init;
+// use crate::model::db_conn_init;
+// use crate::router::start_route;
 
 pub mod config;
 // cargo expand --lib entities::wb_user > expanded.rs  生成的派生宏代码还源成源码 保存到 expanded.rs 文件中
@@ -14,7 +14,7 @@ pub mod utils;
 // 测试使用的
 pub mod test;
 
-pub async fn run() {
+/*pub async fn run() {
     //初始化
     config_init().await;
 
@@ -24,7 +24,7 @@ pub async fn run() {
     //开启路由
     start_route().await;
 }
-
+*/
 #[cfg(test)]
 mod test_expand {
     use super::entities::wb_user;
